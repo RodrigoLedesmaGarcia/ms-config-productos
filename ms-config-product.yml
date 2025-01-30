@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-products
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pagosDB
+    username: postgres
+    password: 12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+logging:
+  level:
+    org.hibernate.SQL: debug
+server:
+  port: 7080
